@@ -3,7 +3,7 @@
 /*
     Name:       Blink.ino
     Created:	14/03/2021 12:14:59
-    Author:     XONE\juana
+    Author:     Juan Bustos
 */
 
 // Define User Types below here or use a .h file
@@ -22,6 +22,7 @@ void setup()
 {
     // initialize digital pin LED_BUILTIN as an output.
     pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(115200);
 
 }
 
@@ -32,4 +33,9 @@ void loop()
     delay(1000);                       // wait for a second
     digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
     delay(1000);                       // wait for a second
+    sayHello();
+}
+
+void sayHello() {
+    Serial.println("Hello World");
 }
